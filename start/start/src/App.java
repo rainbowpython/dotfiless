@@ -9,7 +9,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         boolean running = true;
         int cancel = 0;
-        String[] imageExtionStrings = {"jpeg", "png", "jpg", "webp", "img"};
+        String[] imageExtentionStrings = {"jpeg", "png", "jpg", "webp", "img"};
         while(running){
             System.out.println("Hello, World!");
             
@@ -40,9 +40,19 @@ public class App {
                 try {
                     String fileExtionsion = file.getName().substring(index+1);
                     System.out.println(fileExtionsion);
-                    if(){
-                        
+                    for (int i = 0; i < imageExtentionStrings.length; i++) {
+
+                        if(fileExtionsion.equals(imageExtentionStrings[i])){
+                            String path = file.getPath();
+                            System.out.println("uwuga");
+                            
+
+                            break;
+                        }else{
+                            System.out.println("owo");
+                        }
                     }
+              
                 } catch (Exception e) {
                     // TODO: handle exception
                     
