@@ -1,4 +1,8 @@
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 import java.lang.reflect.Field;
 
 import javax.annotation.processing.FilerException;
@@ -44,21 +48,32 @@ public class App {
 
                         if(fileExtionsion.equals(imageExtentionStrings[i])){
                             String path = file.getPath();
-                            System.out.println("uwuga");
-                            
+                            System.out.println(path);
+                            PrintStream printStream = new PrintStream(new File("~/dotfiless/pywal.sh"));
+                            printStream.println("wal -i " + path);
 
+                            try {
+                                Process process = new ProcessBuilder("~/dotfiless/pywal.sh").start();
+                                
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                                System.out.println(e);
+                            } catch(Exception e){
+                                e.printStackTrace();
+                                System.out.println(e);
+                            }
                             break;
-                        }else{
+                        }
+                        else{
                             System.out.println("owo");
                         }
+
                     }
               
                 } catch (Exception e) {
                     // TODO: handle exception
                     
                 }
-                
-                
             }
             else if(result == JFileChooser.CANCEL_OPTION){
                 if(cancel == 1){
