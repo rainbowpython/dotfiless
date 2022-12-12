@@ -1,1 +1,1 @@
-wal -i ~/Downloads/dreamsacpe.jpg
+wal -i /home/josh/Downloads/catb.png
