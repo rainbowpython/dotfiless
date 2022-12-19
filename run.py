@@ -7,7 +7,7 @@ from tkinter import ttk
 imagefileextensions = [".jpeg", ".png", ".jpg", ".webp", ".img"]
 
 root = tk.Tk()
-#root.withdraw()
+#root.withdraw(
 
 style = ttk.Style(root)
 #i got this from stackoverflow
